@@ -96,14 +96,12 @@
 <div id="container"></div>
 
 <div id="info">
-  The <a href="http://www.chromeexperiments.com/globe">WebGL Globe</a> is an
-  open platform for visualizing geographic data. <span
-    class="bull">&bull;</span> <a href="https://github.com/dataarts/webgl-globe">Get
-  the code</a> <span class="bull">&bull;</span> By the Google Data Arts Team</a>
+  Built using <a href="http://www.chromeexperiments.com/globe">WebGL Globe</a>
+  <span class="bull">&bull;</span> <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php">Source Data from USGS/</a>
 </div>
 
 <div id="title">
-  Google Search Volume by Language
+  All Earthquakes in the past 30 days.
 </div>
 
 <a id="ce" href="http://www.chromeexperiments.com/globe">
@@ -119,29 +117,54 @@
 <script type="text/javascript" src="/static/js/underscore-min.js"></script>
 <script type="text/javascript">
 
+  /*var colors = [0xC95BCC, 0xCABFFF, 0x3D254D, 0xffdd00, 0];
+  var globe = DAT.Globe(document.getElementById('container'),function(label)
+        {
+          return new THREE.Color(colors[label]);
+        });*/
   var globe = DAT.Globe(document.getElementById('container'));
+  var magscale = d3.scale.linear().range([0,0.4]);
 
   d3.csv("static/data/all_month_earthquakes.csv",function(d){
   	  	d.latitude = +d.latitude;
   		d.longitude = +d.longitude;
   		d.mag = +d.mag;
   		return d;
-  	},function(data){
-  	var max = d3.max(_.pluck(data,"mag"));
+  	}, function(data){
 
-  	var magscale = d3.scale.linear()
-  				.range([0,0.2])
-  				.domain(d3.extent(data,function(d){return d.mag}));
+  		/*d3.csv("static/data/all_week.csv",function(d){
+	  	  	d.latitude = +d.latitude;
+	  		d.longitude = +d.longitude;
+	  		d.mag = +d.mag;
+	  		return d;
+	  	}, function(dataweek){*/
 
-  	data = _.flatten(data.map(function(d){
-  		d.mag = magscale(d.mag);
-  		return [d.latitude,d.longitude,d.mag];
-  	}));
-  	console.log(data);
-        globe.addData(data, {format: 'magnitude'});
-        globe.createPoints();
-        globe.animate();
-        document.body.style.backgroundImage = 'none'; // remove loading  
+		  	magscale.domain(d3.extent(data,function(d){return d.mag}));
+
+		  	data = _.flatten(data.map(function(d){
+		  		d.mag = magscale(d.mag);
+		  		return [d.latitude,d.longitude,d.mag];//0
+		  	}));
+
+		  	//magscale.domain(d3.extent(dataweek,function(d){return d.mag}));
+
+		  	/*dataweek = _.flatten(dataweek.map(function(d){
+		  		d.mag = magscale(d.mag);
+		  		return [d.latitude,d.longitude,d.mag];//1
+		  	}));*/
+		  	
+
+		  	//var newdata = data.concat(dataweek)//[eqm,eqw];
+		  	//console.log(newdata);
+
+	        //globe.addData( newdata, {format: 'legend'});//{format: 'magnitude'}, newdata[i][0] );
+
+
+		    globe.addData(data, {format: 'magnitude'});
+		    globe.createPoints();
+		    globe.animate();
+		    document.body.style.backgroundImage = 'none'; // remove loading  
+		//});
   });
 
 </script>
