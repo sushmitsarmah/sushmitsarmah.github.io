@@ -7,7 +7,7 @@ import 'semantic-ui-css/semantic.css';
 class Root extends React.Component {
     render(){
         return (
-            <h4>Test react</h4>
+            <h4>React Project for Sushmit</h4>
         );
     }
 }

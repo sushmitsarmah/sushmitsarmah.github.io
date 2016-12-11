@@ -40,7 +40,7 @@ webpackJsonp([0],{
 	            return _react2.default.createElement(
 	                'h4',
 	                null,
-	                'Test react'
+	                'React Project for Sushmit'
 	            );
 	        }
 	    }]);

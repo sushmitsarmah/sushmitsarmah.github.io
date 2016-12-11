@@ -5,7 +5,7 @@ var path = require('path');
 var poststylus = require('poststylus');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
-var DEST_DIRNAME = 'dest';
+var DEST_DIRNAME = 'dist';
 var DEST_DIR = path.resolve(__dirname, DEST_DIRNAME);
 var SRC_DIR = path.resolve(__dirname, 'src');
 
@@ -17,10 +17,10 @@ var config = {
     },
     output: {
         path: './',
-        filename: 'dest/[name].[hash].js'
+        filename: DEST_DIRNAME+'/js/[name].[hash].js'
     },
     plugins: [
-        new CleanWebpackPlugin(['dest']),
+        new CleanWebpackPlugin([DEST_DIRNAME]),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: SRC_DIR + '/index.html'
@@ -31,7 +31,7 @@ var config = {
             d3: "d3",
             "_": "lodash"
         }),
-        new ExtractTextPlugin(DEST_DIRNAME+"/[name].[hash].css"),
+        new ExtractTextPlugin(DEST_DIRNAME+"/css/[name].[hash].css"),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app','vendor1','vendor2']
         }),
@@ -52,18 +52,13 @@ var config = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loader: 'file?name='+DEST_DIRNAME+'/assets/[name].[hash].[ext]'
+                loader: 'file?name=' + DEST_DIRNAME + '/assets/[name].[hash].[ext]'
             },
             {   test: /\.css$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },            
             {   test: /\.styl$/,
-                // loader: ExtractTextPlugin.extract('style', 'css?sourceMap!stylus?sourceMap') 
                 loader: ExtractTextPlugin.extract(['css-loader','stylus-loader'])
-                // loader: ExtractTextPlugin.extract({
-                //     fallbackLoader: "css?sourceMap",
-                //     loader: "stylus?sourceMap"
-                // })
             }
         ]
     },
