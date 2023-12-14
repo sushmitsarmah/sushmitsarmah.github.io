@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <title>Feng</title>
+  
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/saira-extra-condensed@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sans@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="/main.css">
+
+  
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+
+<script src="/elasticlunr.min.js" defer></script>
+
+<script src="/search_index.en.js" defer></script>
+
+
+
+
+  
+  
+<!-- RSS -->
+
+<link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+
+
+  
+
+  
+  
+</head>
+
+<body>
+  <aside id="sidebar" class="menu is-hidden-touch">
+    
+
+<div style="display:block;margin:auto auto 0;padding:.5rem">
+    <figure class="image">
+        <img id="avatar" class="avatar-rect" src="/media/photo.jpeg">
+    </figure>
+</div>
+
+
+    
+<ul id="menu" class="menu-list">
+    
+
+<li data-menuanchor="about"><a href="/#anchor_about">ABOUT</a></li>   
+
+
+<li data-menuanchor="certs"><a href="/#anchor_certs">CERTIFICATES/AWARDS</a></li>   
+
+ 
+<li data-menuanchor="skills"><a href="/#anchor_skills">SKILLS</a></li>
+
+
+
+
+ 
+<li data-menuanchor="experience"><a href="/#anchor_experience">EXPERIENCE</a></li>
+
+ 
+<li data-menuanchor="education"><a href="/#anchor_education">EDUCATION</a></li>
+
+
+</ul>
+
+  </aside>
+  
+<div class="modal" id="copyTarget">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <section class="modal-card-body">
+      <textarea class="textarea" id="bibtex-content" placeholder="e.g. Hello world"  readonly></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" id="copyButton">Copy to clipboard</button>
+    </footer>
+  </div>
+</div>
+
+  <div id="content">
+    <!-- Content -->
+    
+<div id="fullpage">
+  
+  <div class="section hero is-fullheight page" id="about">
+    
+
+<div class="is-flex is-flex-direction-column" style="height: 100%;">
+  <div class="flex: 1;">
+    <h1>Sushmit <span class="text-primary">Sarmah</span></h1>
+    <h2 class="subtitle">
+      Full Stack and blockchain developer ·  <a href="mailto:"></a>
+    </h2>
+  </div>
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="flex: 1; overflow: auto;">
+    <div class="content" style="overflow: auto; padding-top: 1.5rem;">
+      <h4 id="i-am-a-full-stack-blockchain-developer-proficient-in-rust-golang-nodejs-python-and-frontend-frameworks-like-react-angular-and-vue">I am a full stack / blockchain developer proficient in rust, golang, nodejs, python and frontend frameworks like React, Angular and Vue .</h4>
+<h4 id="i-specialize-in-geospatial-projects-and-data-visualization-using-libraries-like-openlayers-leaflet-echarts-and-d3-js-i-also-have-blockchain-solidity-experience-having-worked-in-several-projects">I specialize in geospatial projects and data visualization using libraries like openlayers, leaflet, echarts and d3.js. I also have blockchain/solidity experience having worked in several projects.</h4>
+<h4 id="i-do-a-lot-of-blockchain-projects-and-have-participated-and-won-prizes-in-several-eth-global-events-i-am-proficient-in-solidity-to-create-contracts-in-ethereum-based-chains-and-rust-to-create-contracts-in-projects-like-solana-and-near">I do a lot of blockchain projects and have participated and won prizes in several ETH Global events. I am proficient in solidity to create contracts in ethereum based chains and rust to create contracts in projects like Solana and Near.</h4>
+<ul>
+<li>🐯 My LinkTree <a href="https://linktr.ee/sushmitsarmah">Link</a></li>
+</ul>
+
+    </div>
+    <div class="is-hidden-touch">
+      <h3>Social Media</h3>
+      
+      <div class="social-media">
+      
+      <a href="https:&#x2F;&#x2F;twitter.com&#x2F;waterreptile19" style="font-size: 1.75rem;" data-toggle="tooltip" title="Twitter"
+        data-offset="0,10" rel="me">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        
+      <a href="https:&#x2F;&#x2F;discordapp.com&#x2F;users&#x2F;waterreptile19" style="font-size: 1.75rem;" data-toggle="tooltip" title="Discord"
+        data-offset="0,10" rel="me">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        
+      <a href="https:&#x2F;&#x2F;t.me&#x2F;namelesspariah" style="font-size: 1.75rem;" data-toggle="tooltip" title="Telegram"
+        data-offset="0,10" rel="me">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        
+      <a href="https:&#x2F;&#x2F;github.com&#x2F;sushmitsarmah" style="font-size: 1.75rem;" data-toggle="tooltip" title="GitHub"
+        data-offset="0,10" rel="me">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+  
+  <div class="section hero is-fullheight page" id="certs">
+    
+
+<div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%; gap: 20px">
+    <h2>Certifications</h2>
+    
+    <div class="certifications">
+        
+        <a href="https:&#x2F;&#x2F;opensea.io&#x2F;assets&#x2F;matic&#x2F;0xdBf2138593aeC61d55d86E80b8ed86D7b9ba51F5&#x2F;6823" data-toggle="tooltip" title="Encode Solana Bootcamp July 2023" data-offset="0,10" rel="me">
+            <figure class="image is-64x64">
+                
+                <img src="https:&#x2F;&#x2F;raw.seadn.io&#x2F;files&#x2F;150b00ba190172e84ac5a1c81ac3a04c.jpg">
+                
+            </figure>
+        </a>
+        
+        <a href="https:&#x2F;&#x2F;opensea.io&#x2F;assets&#x2F;matic&#x2F;0xdBf2138593aeC61d55d86E80b8ed86D7b9ba51F5&#x2F;6725" data-toggle="tooltip" title="Encode Club ZK Bootcamp Q3 2023" data-offset="0,10" rel="me">
+            <figure class="image is-64x64">
+                
+                <img src="https:&#x2F;&#x2F;raw.seadn.io&#x2F;files&#x2F;07bb3026cfa2f519b5ba860cf9766f73.jpg">
+                
+            </figure>
+        </a>
+        
+    </div>
+    <h2>Awards</h2>
+    
+    <div class="awards">
+        
+        <a href="https:&#x2F;&#x2F;ethglobal.com&#x2F;showcase&#x2F;blitzsquad-2jt43" data-toggle="tooltip" title="BlitzSquad - (Huddle01 — Best Use, UMA &amp; Across — Best Use Case)" data-offset="0,10" rel="me">
+            <h3>BlitzSquad - (Huddle01 — Best Use, UMA &amp; Across — Best Use Case)</h3>
+            <div class="details">
+                <span>ETH Global Tokyo 2023</span>
+                <span>|</span>
+                <span>Apr 2023</span>
+            </div>
+        </a>
+        
+        <a href="https:&#x2F;&#x2F;devfolio.co&#x2F;projects&#x2F;playastra-0d4c" data-toggle="tooltip" title="PlayAstra - (Hyperlane — Best DeFi Use, Marlin — Best Use)" data-offset="0,10" rel="me">
+            <h3>PlayAstra - (Hyperlane — Best DeFi Use, Marlin — Best Use)</h3>
+            <div class="details">
+                <span>ETH Global India 2022</span>
+                <span>|</span>
+                <span>Dec 2022</span>
+            </div>
+        </a>
+        
+        <a href="https:&#x2F;&#x2F;ethglobal.com&#x2F;showcase&#x2F;tribeviz-a3za7" data-toggle="tooltip" title="Tribeviz - (Polygon - Best Use case)" data-offset="0,10" rel="me">
+            <h3>Tribeviz - (Polygon - Best Use case)</h3>
+            <div class="details">
+                <span>ETH Global India 2022</span>
+                <span>|</span>
+                <span>September 2022</span>
+            </div>
+        </a>
+        
+        <a href="https:&#x2F;&#x2F;ethglobal.com&#x2F;showcase&#x2F;chainscore-jizuu" data-toggle="tooltip" title="ChainScore - Honorable Mention" data-offset="0,10" rel="me">
+            <h3>ChainScore - Honorable Mention</h3>
+            <div class="details">
+                <span>ETH Global HackMoney 2022</span>
+                <span>|</span>
+                <span>May 2022</span>
+            </div>
+        </a>
+        
+        <a href="https:&#x2F;&#x2F;ethglobal.com&#x2F;showcase&#x2F;quicklend-522q0" data-toggle="tooltip" title="QuickLend - (Superfluid - Best application for DAO finance)" data-offset="0,10" rel="me">
+            <h3>QuickLend - (Superfluid - Best application for DAO finance)</h3>
+            <div class="details">
+                <span>ETH Global DAOHacks 2022</span>
+                <span>|</span>
+                <span>April 2022</span>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+  </div>
+  
+
+  
+  <div class="section hero is-fullheight page" id="skills">
+    
+
+<div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
+  <h2>skills</h2>
+  <div style="overflow: auto;">
+    
+    <div style="padding-bottom: 1rem;">
+      <h3 style="color: #868e96;">Languages and Libraries</h3>
+      <div>
+        
+        
+        <span class="icon"><i class="devicon-golang-plain"></i></span>Golang
+        
+        
+        
+        <span class="icon"><i class="devicon-rust-plain"></i></span>Rust
+        
+        
+        
+        <span class="icon"><i class="devicon-python-plain"></i></span>Python
+        
+        
+        
+        <span class="icon"><i class="devicon-javascript-plain"></i></span>Javascript
+        
+        
+        
+        <span class="icon"><i class="devicon-solidity-plain"></i></span>Solidity
+        
+        
+        
+        <span class="icon"><i class="devicon-react-plain"></i></span>React
+        
+        
+        
+        <span class="icon"><i class="devicon-angular-plain"></i></span>Angular
+        
+        
+        
+        <span class="icon"><i class="devicon-vue-plain"></i></span>Vue
+        
+        
+        
+        <span class="icon"><i class="devicon-openlayers-plain"></i></span>Openlayers
+        
+        
+        
+        <span class="icon"><i class="devicon-node.js-plain"></i></span>Node.js
+        
+        
+        
+        <span class="icon"><i class="devicon-d3.js-plain"></i></span>D3.js
+        
+        
+      </div>
+    </div>
+    
+    <div style="padding-bottom: 1rem;">
+      <h3 style="color: #868e96;">Databases</h3>
+      <div>
+        
+        
+        
+        <span class="icon"><i class="devicon-mysql-plain"></i></span>MySQL&#x2F;MariaDB
+        
+        
+        
+        
+        
+        <span class="icon"><i class="devicon-neo4j-plain"></i></span>Neo4j
+        
+        
+        
+        
+        
+        <span class="icon"><i class="devicon-mongo-plain"></i></span>MongoDB
+        
+        
+        
+        
+        
+        <span class="icon"><i class="devicon-postgres-plain"></i></span>Postgres&#x2F;PostGis
+        
+        
+        
+      </div>
+    </div>
+    
+    <div style="padding-bottom: 1rem;">
+      <h3 style="color: #868e96;">Containers &amp; Cloud</h3>
+      <div>
+        
+        
+        
+        <span class="icon"><i class="devicon-docker-plain"></i></span>Docker
+        
+        
+        
+        
+        
+        <span class="icon"><i class="devicon-amazon aws-plain"></i></span>Amazon AWS
+        
+        
+        
+        
+        
+        <span class="icon"><i class="devicon-google cloud-plain"></i></span>Google Cloud
+        
+        
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="section hero is-fullheight page" id="experience">
+    
+
+<div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
+  <h2>experience</h2>
+  <div style="overflow: auto;">
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Full Stack Developer (Part-Time)</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            December 2022 - NOW
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://lemniscap.com/">Lemniscap</a></h2>
+        <div>
+          Building softwares like bots and trackers
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Lead Full Stack Developer (Part-Time)</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            May 2018 -  NOW
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://www.youtube.com/@streamershowdown">Visual Core - Streamer Showdown</a></h2>
+        <div>
+          Maintenance and Upgrade of Dashboard
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Full Stack Engineer</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            April 2022 - September 2023
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://www.cardintegrators.com/">CI Solutions</a></h2>
+        <div>
+          Worked on the card integration solutions product for schools
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Full Stack Developer (Part-Time)</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            October 2020 -  August 2022
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://clamisland.gitbook.io/clam-island/">Clam Island</a></h2>
+        <div>
+          Created and maintained the Clam Island platform
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Lead Full Stack Developer &#x2F; Data Scientist</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            April 2017 -  June 2022
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://coplug.co.uk/">Coplug D&amp;T</a></h2>
+        <div>
+          Worked on creating the main product SidM Systems from scratch and added new features to bring it to market.
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Full Stack Developer&#x2F; Data Scientist</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            April 2015 -  March 2018
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://www.gtatelecom.com/">Global Technology Associates</a></h2>
+        <div>
+          Responsible for the frontend and backend development of the GINA tool that plotted all mobile towers data in the US for different clients
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Data Scientist</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            July 2013 -  January 2015
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://gramener.com/">Gramener Technologies</a></h2>
+        <div>
+          Worked on creating data visualization dashboards from customer's big data
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3>Freelance Full Stack Developer (Part-Time)</h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            January 2014 -  NOW
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle"><a href="https://www.upwork.com/">Upwork</a></h2>
+        <div>
+          Freelance Full Stack Developer in Upwork. I have worked with numerous clients in various technologies
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+  </div>
+  
+
+  
+  <div class="section hero is-fullheight page" id="education">
+    
+
+<div class="is-flex is-flex-direction-column is-justify-content-center" style="height: 100%;">
+  <h2>education</h2>
+  <div  style="overflow: auto;">
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3><a href="https://www.imi.edu/">International Management Institute, New Delhi</a></h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            2008 - 2010
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle">PGDM Marketing and Operations</h2>
+        <div>
+          Marketing
+        </div>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3><a href="https://hit.edu.cn">Visvesvaraya Technological University</a></h3>
+          </div>
+        </div>
+        <div class="level-right is-hidden-touch">
+          <div class="level-item">
+            2003 - 2007
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-column is-align-items-start">
+        <h2 class="subtitle">BE Electronics &amp; Communications</h2>
+        <div>
+          Electronics and Communication
+        </div>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+  
+<script>
+  function show_bib(bib_path) {
+    $.ajax({
+      url: bib_path,
+      success: function (data) {
+        $("#bibtex-content").text(data);
+        $("#copyTarget").addClass("is-active");
+      },
+    });
+  }
+
+  document
+    .getElementById("copyButton")
+    .addEventListener("click", function () {
+      var copyText = document.getElementById("bibtex-content");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+      $("#copyTarget").removeClass("is-active");
+    });
+</script>
+
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript">
+    var fullpages = new fullpage('#fullpage', {
+        menu: '#menu',
+        setRecordHistory: false,
+        anchors: [
+             'anchor_about',         
+             'anchor_certs',         
+             'anchor_skills',        
+            
+            
+            
+             'anchor_experience',    
+             'anchor_education',     
+            
+        ],
+        afterResize: function( width, height ){
+		    if (width < 936) {
+                fullpage_api.setAutoScrolling(false);
+            } else {
+                fullpage_api.setAutoScrolling(true);
+            }
+	    }
+    });
+    if (screen.width < 936){
+        fullpages.setAutoScrolling(false);
+    }
+
+</script>
+
+</body>
+
+</html>
